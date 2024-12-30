@@ -34,7 +34,7 @@ export default defineConfig({
       // Record trace only when retrying a test for the first time.
       video: 'on-first-retry',
 
-  browserName: 'firefox'
+  browserName: 'chromium'
       // Record video only when retrying a test for the first time.
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',

@@ -11,7 +11,7 @@ class LoginPage{
     private selectTitle:Locator;
     private password:Locator;
 
-     constructor(page:Page) {
+     constructor(page:Page) {  
     this.page=page;
         this.login = page.locator("a[href='/login']");
         this.name = page.getByPlaceholder('Name');
