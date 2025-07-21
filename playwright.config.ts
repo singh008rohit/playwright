@@ -17,19 +17,25 @@ export default defineConfig({
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
+  timeout: 50000,
+  // 👈 prevent auto-opening
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
+  //[['html', { open: 'never' }]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+   
     colorScheme: 'dark',
       // Capture screenshot after each test failure.
-      screenshot: 'only-on-failure',
+      screenshot: 'on',
       headless: false,
-      trace: 'on',
+      trace: 'retain-on-failure',
+    
+
 
       // Record trace only when retrying a test for the first time.
       video: 'on-first-retry',

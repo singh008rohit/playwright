@@ -1,5 +1,5 @@
 import { Locator ,Page,expect} from "@playwright/test";
-class LoginPage{
+ class LoginPage{
 
     private login: Locator;
     private name: Locator;
@@ -37,6 +37,6 @@ await this.password.fill(password);
 
         
     }
-}
+}7
 
 export { LoginPage };
