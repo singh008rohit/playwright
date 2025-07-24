@@ -32,7 +32,7 @@ export default defineConfig({
     colorScheme: 'dark',
       // Capture screenshot after each test failure.
       screenshot: 'on',
-      headless: false,
+      headless: true,
       trace: 'retain-on-failure',
     
 
