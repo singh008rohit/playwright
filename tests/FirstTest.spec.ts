@@ -2,7 +2,7 @@ import { test, expect, Browser, Page, Locator, chromium } from '@playwright/test
 import { firefox } from 'playwright';
 
 test('login test',  async () => {
-  const browser: Browser = await chromium.launch({ headless: false });
+  const browser: Browser = await chromium.launch();
    const page:Page =await  browser.newPage();
    
    test.setTimeout(40000);

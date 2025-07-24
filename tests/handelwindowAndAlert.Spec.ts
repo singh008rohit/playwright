@@ -2,7 +2,7 @@ import { test,expect,Page,Locator,Browser, chromium,Dialog } from "@playwright/t
 
 test('handel alert',async()=>{
 
-    const browser:Browser = await chromium.launch({headless:false});
+    const browser:Browser = await chromium.launch();
     const page:Page =await browser.newPage();
     await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
     test.setTimeout(45000);
