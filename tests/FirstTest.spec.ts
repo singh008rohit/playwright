@@ -13,12 +13,12 @@ test('login test',  async () => {
   const login:Locator= page.locator("xpath=//li[@id='menu-item-85']//a[contains(text(),'Login')]");
   const emailField: Locator =  page.locator("xpath=//input[@name='email']");
   const passwordField: Locator =  page.locator("xpath=//input[@name='password']");
-  const submitButton:Locator = page.locator("xpath=//button[@type='submit']");
+  //const submitButton:Locator = page.locator("xpath=//button[@type='submit']");
  
   await login.click();
   await emailField.fill("singh");
   await passwordField.fill("namr");
-  await submitButton.click();
+  //await submitButton.click();
 
   // Your test actions here
 

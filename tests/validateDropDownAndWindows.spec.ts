@@ -22,7 +22,7 @@ console.log(await newPage.title());
 
 });
 
-test.only('validiting javascript alerts',async()=>{
+test('validiting javascript alerts',async()=>{
 
     const browser:Browser= await chromium.launch();
     const context:BrowserContext= await browser.newContext();

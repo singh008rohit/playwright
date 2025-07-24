@@ -1,13 +1,12 @@
 import {test ,expect,Browser ,Page,firefox,webkit,chromium} from '@playwright/test'
      
-import { Context } from 'vm';
 
 
 test(' select dynamic dropdown',async()=>{
 
     const browser:Browser= await chromium.launch()
 
-      const context:Context=   await browser.newContext();
+      const context=   await browser.newContext();
 
      const page:Page= await context.newPage();
 
@@ -19,7 +18,7 @@ test(' select dynamic dropdown',async()=>{
      //await page.getByRole('link', { name: 'Product Overview' }).hover();
     await page.locator("xpath = //a[text()='Advanced Overview (Long)']").first().click();
 
-     page.pause();
+     
 
 
 });
